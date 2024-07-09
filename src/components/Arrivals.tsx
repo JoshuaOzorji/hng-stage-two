@@ -23,7 +23,7 @@ const Arrivals = () => {
 					</div>
 				))}
 
-				<div className='bg-white/60 absolute w-fit h-fit md:p-10 flex flex-col justify-center items-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl'>
+				<div className='bg-white/60 absolute w-fit h-fit md:p-10 flex flex-col justify-center items-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl py-2'>
 					<p className='p-2 md:py-2 text-sm md:text-4xl text-white font-bold text-center'>
 						High quality print T-shirts now Available
 					</p>

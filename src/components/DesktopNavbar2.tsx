@@ -1,9 +1,9 @@
 import { FaHeart } from "react-icons/fa";
 import { TiShoppingCart } from "react-icons/ti";
 
-const DesktopNavbar = () => {
+const DesktopNavbar2 = () => {
 	return (
-		<main className='text-white font-daysOne bg-black py-4 md:px-16 md:text-[15px]'>
+		<main className='text-black font-daysOne bg-white py-4 md:px-16 md:text-[15px]'>
 			<div className='flex items-center justify-between'>
 				<h3>PANDAS</h3>
 
@@ -19,12 +19,12 @@ const DesktopNavbar = () => {
 						id='search'
 						name='search'
 						placeholder='search'
-						className='focus:outline-none text-black font-montserrat text-[15px] rounded-[22px] px-3 py-1'
+						className='focus:outline-none text-black font-montserrat text-[15px] rounded-[22px] px-3 py-1 bg-[#F5F5F5]'
 					/>
 					<FaHeart className='w-5 h-5' />
 					<TiShoppingCart className='w-5 h-5' />
 
-					<button className='text-[13px] bg-white text-black rounded-[14px] px-6 py-1'>
+					<button className='text-[13px] bg-black text-white rounded-[14px] px-6 py-1'>
 						Log in
 					</button>
 				</div>
@@ -33,4 +33,4 @@ const DesktopNavbar = () => {
 	);
 };
 
-export default DesktopNavbar;
+export default DesktopNavbar2;

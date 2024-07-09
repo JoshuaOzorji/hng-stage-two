@@ -1,7 +1,7 @@
 import DesktopNavbar2 from "./DesktopNavbar2";
 import MobileNavbar2 from "./MobileNavbar2";
 
-const Navbar = () => {
+const Navbar2 = () => {
 	return (
 		<main>
 			<div className='block md:hidden'>
@@ -15,4 +15,4 @@ const Navbar = () => {
 	);
 };
 
-export default Navbar;
+export default Navbar2;

@@ -32,13 +32,13 @@ const Footer = () => {
 					<h3 className='font-bold text-[8px] md:text-sm'>Social Media</h3>
 					<ul className='flex gap-1 md:gap-4 items-center my-2'>
 						<li>
-							<FaFacebookF className='w-2 h-2' />
+							<FaFacebookF className='w-2 h-2 md:w-4 md:h-4' />
 						</li>
 						<li>
-							<FaInstagram className='w-2 h-2' />
+							<FaInstagram className='w-2 h-2 md:w-4 md:h-4' />
 						</li>
 						<li>
-							<FaTwitter className='w-2 h-2' />
+							<FaTwitter className='w-2 h-2 md:w-4 md:h-4' />
 						</li>
 					</ul>
 				</div>
