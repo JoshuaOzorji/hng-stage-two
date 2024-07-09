@@ -40,7 +40,7 @@ const Featured = () => {
 				))}
 			</section>
 
-			<span className='text-black flex items-center justify-end md:my-4 text-sm'>
+			<span className='text-black flex items-center justify-end my-2 md:my-4 text-xs md:text-sm '>
 				<button>see more</button>
 				<IoIosArrowForward />
 			</span>

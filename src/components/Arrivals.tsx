@@ -12,7 +12,7 @@ const Arrivals = () => {
 	return (
 		<main className='font-montserrat md:px-16'>
 			<p className='md:text-2xl font-bold text-center'>NEW ARRIVALS</p>
-			<div className='bg-[#EFC88B] flex justify-evenly md:px-4 md:rounded-[3rem] my-8 relative'>
+			<div className='bg-[#EFC88B] flex justify-evenly md:px-4 md:rounded-[3rem] my-5 md:my-8 relative'>
 				{arrivalItems.map((item, index) => (
 					<div key={index}>
 						<img
@@ -24,10 +24,10 @@ const Arrivals = () => {
 				))}
 
 				<div className='bg-white/60 absolute w-fit h-fit md:p-10 flex flex-col justify-center items-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl'>
-					<p className='md:py-2 md:text-4xl text-white font-bold text-center'>
+					<p className='p-2 md:py-2 text-sm md:text-4xl text-white font-bold text-center'>
 						High quality print T-shirts now Available
 					</p>
-					<button className='bg-black md:px-6 py-1.5 text-white rounded-xl text-sm'>
+					<button className='bg-black px-3 md:px-6 py-1 md:py-1.5 text-white rounded-lg md:rounded-xl text-[8px] md:text-sm'>
 						SHOP
 					</button>
 				</div>

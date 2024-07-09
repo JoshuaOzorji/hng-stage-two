@@ -9,7 +9,7 @@ import { IoMdStarOutline } from "react-icons/io";
 const productItems = [
 	{
 		image: blackShirt,
-		icon: <FcLike />,
+		icon: <FcLike size={10} />,
 		brand: "Pandas",
 		name: "Printed Black T-Shirt",
 		price: "N40.00",
@@ -18,7 +18,7 @@ const productItems = [
 
 	{
 		image: pinkGown,
-		icon: <FcLike />,
+		icon: <FcLike size={10} />,
 		brand: "Pandas",
 		name: "Printed Black T-Shirt",
 		price: "N40.00",
@@ -27,7 +27,7 @@ const productItems = [
 
 	{
 		image: brownHat,
-		icon: <FaHeart color='white' />,
+		icon: <FaHeart color='white' size={10} />,
 		brand: "Pandas",
 		name: "Printed Black T-Shirt",
 		price: "N40.00",
@@ -36,7 +36,7 @@ const productItems = [
 
 	{
 		image: greenTop,
-		icon: <FaHeart color='white' />,
+		icon: <FaHeart color='white' size={10} />,
 		brand: "Pandas",
 		name: "Printed Black T-Shirt",
 		price: "N40.00",
@@ -50,6 +50,7 @@ const renderStars = (rating: number) => {
 		.map((_, index) => (
 			<IoMdStarOutline
 				key={index}
+				size={12}
 				color={index === rating - 1 ? "#000000" : "#EFC88B"}
 			/>
 		));
@@ -57,28 +58,30 @@ const renderStars = (rating: number) => {
 
 const Products = () => {
 	return (
-		<main>
-			<p className='font-montserrat md:text-2xl font-bold text-center'>
+		<main className='px-4 md:px-16 mb-4'>
+			<p className='font-montserrat text-sm md:text-2xl font-bold  text-left md:text-center mb-2'>
 				POPULAR PRODUCTS
 			</p>
-			<div className='flex justify-between font-montserrat gap-x-2 p-4 md:px-16 md:py-10'>
+			<div className='flex justify-between font-montserrat gap-x-1 md:gap-x-2 p-1 md:p-4 md:py-10'>
 				{productItems.map((item, index) => (
 					<div key={index}>
-						<div className='flex gap-x-2 md:gap-4 relative'>
+						<div className='flex gap-1 md:gap-x-2 md:gap-4 relative'>
 							<img
 								src={item.image}
 								alt='featured image'
 								className='object-contain md:h-[45vh]'
 							/>
-							<div className='absolute top-0 right-0 p-1.5  rounded-full bg-[#EEE5E9]'>
+							<div className='absolute top-0 right-0 p-1 md:p-1.5 rounded-full bg-[#EEE5E9]'>
 								{item.icon}
 							</div>
 						</div>
 
 						<div className='font-bold md:px-4'>
-							<p className='md:text-[10px]'>{item.brand}</p>
-							<h4 className='md:text-sm'>{item.name}</h4>
-							<h4 className='md:text-sm text-[#CF5C36]'>{item.price}</h4>
+							<p className='text-[8px] md:text-[10px]'>{item.brand}</p>
+							<h4 className='text-[10px] md:text-sm'>{item.name}</h4>
+							<h4 className='text-[10px] md:text-sm text-[#CF5C36]'>
+								{item.price}
+							</h4>
 							<div className='flex'>{renderStars(item.rating)}</div>
 						</div>
 					</div>
