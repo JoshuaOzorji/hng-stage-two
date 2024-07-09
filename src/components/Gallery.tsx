@@ -26,11 +26,9 @@ const Gallery = () => {
 				))}
 			</div>
 
-			<div className='flex items-center'>
-				<button className='border border-black md:px-6 py-1.5 text-black font-semibold rounded-xl text-sm'>
-					VIEW
-				</button>
-			</div>
+			<button className='border border-black md:px-6 py-1.5 text-black font-semibold rounded-xl text-sm'>
+				VIEW
+			</button>
 		</main>
 	);
 };
