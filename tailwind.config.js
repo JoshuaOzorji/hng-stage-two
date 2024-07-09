@@ -9,6 +9,7 @@ export default {
 			fontFamily: {
 				daysOne: ["Days One", "sans-serif"],
 				montserrat: ["Montserrat", "sans-serif"],
+				lato: ["Lato", "sans-serif"],
 			},
 
 			screens: {
