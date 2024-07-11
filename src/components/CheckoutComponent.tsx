@@ -10,8 +10,8 @@ import paypal from "/paypal.png";
 
 const paymentItems = [
 	{ image: mastercard },
-	{ image: visa },
 	{ image: paypal },
+	{ image: visa },
 ];
 
 const CheckoutComponent = () => {
@@ -29,7 +29,9 @@ const CheckoutComponent = () => {
 
 				<div className='bg-[#EFC88B] p-2 flex items-center gap-2 my-6'>
 					<IoCheckboxSharp className='text-black' />
-					<p className='text-black font-bold'>ALL ITEMS (2)</p>
+					<p className='text-black font-bold text-xs md:text-base'>
+						ALL ITEMS (2)
+					</p>
 				</div>
 
 				<div className='p-2 flex items-center gap-2 font-daysOne my-2'>
@@ -53,14 +55,14 @@ const CheckoutComponent = () => {
 							<p>Colour:</p> <p className='font-bold'>Night/Black</p>
 						</span>
 
-						<div className='flex justify-between '>
+						<div className='flex flex-col md:flex-row justify-between'>
 							<div className='flex gap-1'>
 								<p className='text-[#CF5C36] font-bold'>N40.00</p>
 								<p className='text-neutral-500 line-through '>N40.00</p>
 							</div>
 
-							<div className='flex items-center justify-between md:gap-6'>
-								<span className='border rounded-lg flex px-4 py-0.5 items-center text-sm border-black gap-4'>
+							<div className='flex items-center justify-between md:gap-6 md:pr-2'>
+								<span className='border rounded-lg flex px-2 md:px-4 py-0.5 items-center text-[10px] md:text-sm border-black gap-4 my-2 md:my-0  '>
 									Qty 1
 									<MdKeyboardArrowDown />
 								</span>
@@ -89,14 +91,14 @@ const CheckoutComponent = () => {
 							<p>Colour:</p> <p className='font-bold'>Night/Black</p>
 						</span>
 
-						<div className='flex justify-between '>
+						<div className='flex flex-col md:flex-row justify-between'>
 							<div className='flex gap-1'>
 								<p className='text-[#CF5C36] font-bold'>N40.00</p>
 								<p className='text-neutral-500 line-through '>N40.00</p>
 							</div>
 
-							<div className='flex items-center justify-between md:gap-6'>
-								<span className='border rounded-lg flex px-4 py-0.5 items-center text-sm border-black gap-4'>
+							<div className='flex items-center justify-between md:gap-6 md:pr-2'>
+								<span className='border rounded-lg flex px-2 md:px-4 py-0.5 items-center text-[10px] md:text-sm border-black gap-4 my-2 md:my-0 '>
 									Qty 1
 									<MdKeyboardArrowDown />
 								</span>
@@ -110,9 +112,9 @@ const CheckoutComponent = () => {
 				</div>
 			</section>
 
-			<section className='md:w-[40%] flex flex-col gap-10'>
-				<div className='bg-[#F0F2F5] flex flex-col p-6 gap-4 rounded-lg'>
-					<h3 className='font-bold text-sm md:text-base'>Order Summary</h3>
+			<section className='md:w-[40%] flex flex-col gap-6 md:gap-10'>
+				<div className='bg-[#F0F2F5] flex flex-col p-4 md:p-6 gap-4 rounded-lg'>
+					<h3 className='font-bold text-xs md:text-base'>Order Summary</h3>
 
 					<span className='text-right'>
 						<p className='font-bold'>N14.00</p>
@@ -122,23 +124,37 @@ const CheckoutComponent = () => {
 						<p className='text-[10px] md:text-[12px]'>Reward 40 Panda POINTS</p>
 					</span>
 
-					<button className='w-full text-white bg-black rounded-lg p-2 font-bold'>
+					<button className='w-full text-white bg-black rounded-lg p-2 font-bold text-sm md:text-base'>
 						Checkout Now(2)
 					</button>
 				</div>
 
-				<div className='bg-[#F0F2F5] flex flex-col p-6 gap-4 rounded-lg'>
-					<h3 className='font-bold'>We Accept</h3>
+				<div className='bg-[#F0F2F5] flex flex-col p-4 md:p-6 gap-4 rounded-lg'>
+					<h3 className='font-bold text-xs md:text-base'>We Accept</h3>
 
-					{paymentItems.map((item, index) => (
-						<div key={index}>
-							<img
-								src={item.image}
-								alt={`new arrival img ${index + 1}`}
-								className='object-contain md:h-[70vh]'
-							/>
+					<div className='flex gap-2'>
+						<div className='flex items-center gap-2 w-[50%]'>
+							{paymentItems.map((item, index) => (
+								<div key={index}>
+									<img
+										src={item.image}
+										alt={`payment options img ${index + 1}`}
+										className='object-contain'
+									/>
+								</div>
+							))}
 						</div>
-					))}
+
+						<div className='flex w-[50%] flex-col text-[7px]'>
+							<h2 className='text-[#1B9AAA] font-bold'>Payment Security</h2>
+
+							<p>
+								PANDAS is committed to protecting your payment information and
+								only shares your credit card information with our payment
+								service providers who agreed to safeguard your information.
+							</p>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>
