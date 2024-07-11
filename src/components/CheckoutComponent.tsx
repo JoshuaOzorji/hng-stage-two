@@ -8,7 +8,11 @@ import mastercard from "/mastercard.png";
 import visa from "/visa.png";
 import paypal from "/paypal.png";
 
-const paymentItems = [{ name: mastercard }, { name: visa }, { name: paypal }];
+const paymentItems = [
+	{ image: mastercard },
+	{ image: visa },
+	{ image: paypal },
+];
 
 const CheckoutComponent = () => {
 	return (
@@ -126,7 +130,15 @@ const CheckoutComponent = () => {
 				<div className='bg-[#F0F2F5] flex flex-col p-6 gap-4 rounded-lg'>
 					<h3 className='font-bold'>We Accept</h3>
 
-					<img src='' alt='' />
+					{paymentItems.map((item, index) => (
+						<div key={index}>
+							<img
+								src={item.image}
+								alt={`new arrival img ${index + 1}`}
+								className='object-contain md:h-[70vh]'
+							/>
+						</div>
+					))}
 				</div>
 			</section>
 		</main>
