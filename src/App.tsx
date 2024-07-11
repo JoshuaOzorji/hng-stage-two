@@ -1,8 +1,9 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Layout from "./Layouts/Layout";
 import Layout2 from "./Layouts/Layout";
 import CartPage from "./pages/CartPage";
+import CheckoutPage from "./pages/CheckoutPage";
 
 const App = () => {
 	return (
@@ -24,6 +25,16 @@ const App = () => {
 					</Layout2>
 				}
 			/>
+
+			<Route
+				path='/checkout'
+				element={
+					<Layout2>
+						<CheckoutPage />
+					</Layout2>
+				}
+			/>
+			<Route path='*' element={<Navigate to='/' />} />
 		</Routes>
 	);
 };

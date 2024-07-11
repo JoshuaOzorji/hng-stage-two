@@ -1,15 +1,15 @@
-import DesktopNavbar2 from "./DesktopNavbar2";
-import MobileNavbar2 from "./MobileNavbar2";
+import DesktopNavbar from "./DesktopNavbar";
+import MobileNavbar from "./MobileNavbar";
 
 const Navbar = () => {
 	return (
 		<main>
 			<div className='block md:hidden'>
-				<MobileNavbar2 />
+				<MobileNavbar />
 			</div>
 
 			<div className='hidden md:block'>
-				<DesktopNavbar2 />
+				<DesktopNavbar />
 			</div>
 		</main>
 	);

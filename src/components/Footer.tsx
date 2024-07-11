@@ -5,7 +5,7 @@ import { FaInstagram } from "react-icons/fa6";
 
 const Footer = () => {
 	return (
-		<main className='bg-black font-lato md:px-16 md:py-4'>
+		<main className='bg-black px-1 font-lato md:px-16 md:py-4'>
 			<div className='grid grid-cols-6 gap-4 py-6 text-white '>
 				<h2 className='font-daysOne text-[10px] md:text-base'>PANDAS</h2>
 

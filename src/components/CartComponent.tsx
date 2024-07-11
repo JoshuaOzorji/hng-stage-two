@@ -99,7 +99,7 @@ const CartComponent = () => {
 					</span>
 				</div>
 
-				<div className='flex flex-col gap-3 text-sm'>
+				<div className='flex flex-col gap-3 text-xs md:text-sm'>
 					<span className='flex justify-between border-b border-black'>
 						<p>Why we love it</p>
 						<MdOutlineArrowDropDown />
