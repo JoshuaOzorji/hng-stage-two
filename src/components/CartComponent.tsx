@@ -10,6 +10,7 @@ import { IoMdHeart } from "react-icons/io";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const cartItems = [
 	{ image: cart1 },
@@ -90,9 +91,11 @@ const CartComponent = () => {
 				</ul>
 
 				<div className='flex justify-between items-center gap-4 my-4'>
-					<button className='text-white bg-black font-normal w-[90%] rounded-md py-1.5 text-sm md:text-base'>
+					<Link
+						to='/checkout'
+						className='text-white bg-black font-normal w-[90%] rounded-md py-1.5 text-sm md:text-base text-center'>
 						ADD TO CART
-					</button>
+					</Link>
 
 					<span className='text-white bg-black w-[10%] p-1 rounded-md flex'>
 						<IoMdHeart className='w-6 h-6' />

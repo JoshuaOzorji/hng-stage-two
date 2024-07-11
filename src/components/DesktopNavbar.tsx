@@ -1,17 +1,18 @@
 import { FaHeart } from "react-icons/fa";
 import { TiShoppingCart } from "react-icons/ti";
+import { Link } from "react-router-dom";
 
 const DesktopNavbar = () => {
 	return (
 		<main className='text-white font-daysOne bg-black py-4 md:px-16 md:text-[15px]'>
 			<div className='flex items-center justify-between'>
-				<h3>PANDAS</h3>
+				<Link to='/'>PANDAS</Link>
 
-				<ul className='flex gap-4'>
-					<li>Home</li>
-					<li>Products</li>
-					<li>About Us</li>
-				</ul>
+				<div className='flex gap-4'>
+					<Link to='/'>Home</Link>
+					<Link to='#'>Products</Link>
+					<Link to='#'>About Us</Link>
+				</div>
 
 				<div className='flex gap-4 items-center'>
 					<input

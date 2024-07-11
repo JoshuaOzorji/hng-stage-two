@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Layout from "./Layouts/Layout";
-import Layout2 from "./Layouts/Layout";
+import Layout2 from "./Layouts/Layout2";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
 

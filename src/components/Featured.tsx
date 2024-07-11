@@ -2,6 +2,7 @@ import shorts from "/shorts.png";
 import shirts from "/shirts.png";
 import hats from "/hats.png";
 import { IoIosArrowForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const featuredItems = [
 	{
@@ -25,7 +26,10 @@ const Featured = () => {
 		<main className='font-montserrat p-4 md:px-16 md:py-10'>
 			<section className='flex justify-between gap-x-2 '>
 				{featuredItems.map((item, index) => (
-					<div key={index} className='relative bg-[#EEE5E9] rounded-xl'>
+					<Link
+						to='/cart'
+						key={index}
+						className='relative bg-[#EEE5E9] rounded-xl'>
 						<div className='relative flex gap-x-2 md:gap-4 space'>
 							<img
 								src={item.image}
@@ -36,12 +40,12 @@ const Featured = () => {
 								{item.label}
 							</p>
 						</div>
-					</div>
+					</Link>
 				))}
 			</section>
 
 			<span className='text-black flex items-center justify-end my-2 md:my-4 text-xs md:text-sm '>
-				<button>see more</button>
+				<Link to='/cart'>see more</Link>
 				<IoIosArrowForward />
 			</span>
 		</main>
